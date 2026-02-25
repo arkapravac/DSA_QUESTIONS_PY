@@ -26,3 +26,17 @@ class Solution:
             l2 = l2.next if l2 else None
 
         return dummy.next
+
+    def print_list(node):
+    while node:
+        print(node.val, end=" -> " if node.next else "")
+        node = node.next
+    print()
+
+l1 = ListNode(2, ListNode(4, ListNode(3)))
+l2 = ListNode(5, ListNode(6, ListNode(4)))
+
+sol = Solution()
+result = sol.addTwoNumbers(l1, l2)
+
+print_list(result)
