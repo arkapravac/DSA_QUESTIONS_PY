@@ -22,3 +22,19 @@ class Solution:
         curr.next = list1 or list2
         
         return dummy.next
+
+    def printList(head):
+    curr = head
+    while curr:
+        print(curr.val, end=" -> " if curr.next else "")
+        curr = curr.next
+    print()
+
+l1 = ListNode(1, ListNode(2, ListNode(4)))
+
+l2 = ListNode(1, ListNode(3, ListNode(4)))
+
+sol = Solution()
+merged_head = sol.mergeTwoLists(l1, l2)
+
+printList(merged_head)
