@@ -20,3 +20,9 @@ class Solution:
             
         odd.next = even_head
         return head
+    def print_list(head):
+        curr = head
+        while curr:
+            print(curr.val, end=" -> " if curr.next else "")
+            curr = curr.next
+        print()
