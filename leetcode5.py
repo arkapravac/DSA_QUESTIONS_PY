@@ -26,3 +26,7 @@ class Solution:
             print(curr.val, end=" -> " if curr.next else "")
             curr = curr.next
         print()
+head = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
+sol = Solution()
+result = sol.oddEvenList(head)
+print_list(result)
